@@ -132,10 +132,8 @@ main > section:nth-child(2) {
 }
 
 main > section:nth-child(2) > h2 {
-	width: 100%;
-	padding-left: 67px;
+	padding-right: 1196px;
 	font-size: 1.65rem;
-	box-sizing: border-box;
 }
 
 .grid {
@@ -168,15 +166,23 @@ main > section:nth-child(2) > h2 {
 	font-weight: 700;
 	font-size: 1.15rem;
 	margin-bottom: 10px;
+	text-decoration: none;
+	color: black;
+}
+
+.project-title:hover {
+	border-bottom: 2px solid black;
+	cursor: pointer;
 }
 
 footer {
 	font-size: 1.15rem;
-	padding: 40px 110px;
+	padding: 40px;
 	background-color: #219ebc;
 	color: #e9ecef;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 350px;
 }
 
 footer > section > h2 {
@@ -199,5 +205,5 @@ footer > section > div {
 }
 
 footer > section > div:nth-child(5) {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
