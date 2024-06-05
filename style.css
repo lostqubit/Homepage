@@ -23,7 +23,12 @@ body {
 }
 
 .photo-2 {
-	height: 380px;
+	flex-shrink: 1;
+	max-width: 100%;
+	height: auto;
+	min-width: 0;
+	display: block;
+	object-fit: cover;
 }
 
 .icon-1 {
@@ -47,9 +52,14 @@ main {
 }
 
 #about-me-bg {
-	padding: 40px;
 	position: relative;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+#about-me {
+	padding: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -95,7 +105,7 @@ figure > figcaption {
 	padding-bottom: 5px;
 }
 
-#about-me-bg > article {
+#about-me > article {
 	background-color: white;
 	padding: 15px;
 	max-width: 800px;
@@ -103,17 +113,17 @@ figure > figcaption {
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-#about-me-bg > article > h2 {
+#about-me > article > h2 {
 	font-size: 1.65rem;
 }
 
-#about-me-bg > article > p {
+#about-me > article > p {
 	margin-top: 15px;
 	margin-bottom: 20px;
 	font-size: 1.25rem;
 }
 
-#about-me-bg > article > div {
+#about-me > article > div {
 	display: flex;
 	justify-content: flex-end;
 	gap: 15px;
@@ -185,6 +195,10 @@ footer {
 	gap: 350px;
 }
 
+footer > section {
+	flex-shrink: 0;
+}
+
 footer > section > h2 {
 	font-size: 1.75rem;
 	margin-bottom: 20px;
@@ -206,4 +220,55 @@ footer > section > div {
 
 footer > section > div:nth-child(5) {
 	margin-bottom: 30px;
+}
+
+@media (max-width: 1400px) {
+	#about-me {
+		display: block;
+	}
+
+	figure {
+		float: left;
+		margin-right: 20px;
+	}
+
+	figure > figcaption {
+		top: 15px;
+		left: 80%;
+		bottom: auto;
+		background: none;
+	}
+
+	#about-me-bg {
+		overflow: visible;
+	}
+
+	#about-me > article {
+		margin-top: 100px;
+		margin-left: 40px;
+	}
+
+	#about-me > article > h2 {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	#about-me > article > p {
+		padding-left: 25px;
+		margin-bottom: 30px;
+	}
+
+	.grid {
+		grid-template-columns: repeat(2, 400px);
+	}
+
+	main > section:nth-child(2) > h2 {
+		padding-right: 744px;
+		overflow-wrap: nowrap;
+		margin-top: 100px;
+	}
+
+	footer {
+		gap: 50px;
+	}
 }
